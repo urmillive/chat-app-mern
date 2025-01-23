@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './chat.component.html',
-  styleUrl: './chat.component.scss'
+  styleUrl: './chat.component.scss',
 })
 export class ChatComponent {
-  name: string = 'Angular';
+  name: string = 'Chat App';
   messages: string[] = [];
   message: string = '';
 }

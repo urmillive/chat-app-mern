@@ -10,7 +10,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "express": "^4.21.1",
     "socket.io": "^4.8.1"
-  }
+  },
+  "devDependencies": {
+    "nx": "20.3.2"
+  },
+  "nx": {}
 }
