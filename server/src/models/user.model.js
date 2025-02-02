@@ -37,8 +37,10 @@ const userSchema = new Schema({
 
 
 userSchema.pre("save", async function (next) {
-    if (!this.modified("password")) return next();
-    this.password = bcrypt.hash(this.password, 10)
+    // if (!this.modified("password")) return next();
+    // this.password = bcrypt.hash(this.password, 10)
+    const user = this;
+    console.log("user: ", user)
     next()
 })
 
@@ -59,6 +61,7 @@ userSchema.methods.generateAccessToken = function () {
         },
     )
 }
+
 userSchema.methods.generateRefreshToken = function () {
     return jwt.sign({
         _id: this._id,
